@@ -1,2 +1,7 @@
 # basic-calculator-js
-Proyek ini adalah kalkulator sederhana berbasis JavaScript untuk melakukan perhitungan dasar seperti penjumlahan, pengurangan, perkalian, dan pembagian. Dibuat dengan HTML, CSS, dan JavaScript, proyek ini sangat cocok untuk pemula yang ingin belajar membuat aplikasi sederhana serta memahami manipulasi DOM.
+Proyek ini adalah aplikasi kalkulator sederhana yang dibuat dengan JavaScript. Fungsinya buat melakukan perhitungan dasar seperti tambah, kurang, kali, dan bagi. Dibangun dengan HTML, CSS, dan JavaScript tanpa framework tambahan, aplikasi ini cocok untuk kamu yang baru belajar pemrograman dan ingin mencoba bikin kalkulator sendiri!
+
+Fitur
+Perhitungan matematika dasar (tambah, kurang, kali, bagi)
+Tampilan simpel dan mudah digunakan
+
