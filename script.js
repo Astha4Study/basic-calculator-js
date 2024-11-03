@@ -2,8 +2,6 @@ const layar = document.querySelector(".screen");
 const papanKalkulator = document.querySelector(".calculator-body");
 
 papanKalkulator.addEventListener("click", function (event) {
-
-
     if (event.target.tagName !== "INPUT") return;
 
     if (event.target.classList.contains("action-clear")) {
@@ -44,7 +42,7 @@ papanKalkulator.addEventListener("click", function (event) {
     }
 
     if (event.target.classList.contains("percent")) {
-        let result = precentage(parseFloat(layar.innerText));
+        let result = percentage(parseFloat(layar.innerText));
         layar.innerText = limitDecimal(result);
         return;
     }
@@ -52,6 +50,31 @@ papanKalkulator.addEventListener("click", function (event) {
     if (event.target.classList.contains("action-log")) {
         let result = Math.log10(parseFloat(layar.innerText));
         layar.innerText = limitDecimal(result);
+        return;
+    }
+
+    if (event.target.classList.contains("action-sqrt")) {
+        let result = Math.sqrt(parseFloat(layar.innerText));
+        layar.innerText = limitDecimal(result);
+        return;
+    }
+
+    if (event.target.classList.contains("action-square")) {
+        let result = Math.pow(parseFloat(layar.innerText), 2);
+        layar.innerText = limitDecimal(result);
+        return;
+    }
+
+    if (event.target.classList.contains("action-exp")) {
+        let result = Math.exp(parseFloat(layar.innerText));
+        layar.innerText = limitDecimal(result);
+        return;
+    }
+
+    if (event.target.classList.contains("action-factorial")) {
+        let value = parseInt(layar.innerText);
+        let result = factorial(value);
+        layar.innerText = result;
         return;
     }
 
@@ -66,6 +89,16 @@ function limitDecimal(value) {
     return parseFloat(value.toFixed(7));
 }
 
-function precentage(value) {
+function percentage(value) {
     return value * (1 / 100);
+}
+
+function factorial(n) {
+    if (n < 0) return "Error";
+    if (n === 0 || n === 1) return 1;
+    let result = 1;
+    for (let i = 2; i <= n; i++) {
+        result *= i;
+    }
+    return result;
 }
